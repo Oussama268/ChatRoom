@@ -6,7 +6,10 @@ const { Server } = require("socket.io");
 const cors = require('cors');
 
 
-app.use(cors())
+
+
+app.get('/socket', (req, res) => {
+    app.use(cors())
 
 
 const server = http.createServer(app);
@@ -39,6 +42,8 @@ io.on("connection" , (socket) => {
     })
 
 })
+    
+});
 
 
 
@@ -46,7 +51,5 @@ io.on("connection" , (socket) => {
 
 
 
-server.listen("8000" , () => {
-    console.log("connected in port 8000")
-})
 
+module.exports = app;
