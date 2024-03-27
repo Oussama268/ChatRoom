@@ -8,7 +8,7 @@ const cors = require('cors');
 
 
 
-app.get('/socket', (req, res) => {
+app.get('/socket.io', (req, res) => {
     app.use(cors())
 
 
