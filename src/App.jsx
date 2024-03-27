@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import {io} from "socket.io-client"; 
 import axios from 'axios';
 
-const socket = io("http://192.168.1.103:8000/");
+
+
+const socket = io();
 
 
 
