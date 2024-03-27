@@ -13,7 +13,7 @@ const server = http.createServer(app);
 
 const io = new Server(server , {
     cors:{
-        origin : ["http://localhost:5173","http://192.168.8.240:5173"],
+        origin : ["http://localhost:5173"],
         methods: ["GET" , "POST"]
 
     }
@@ -46,7 +46,7 @@ io.on("connection" , (socket) => {
 
 
 
-server.listen("8000" , "192.168.8.240", () => {
+server.listen("8000" , () => {
     console.log("connected in port 8000")
 })
 
